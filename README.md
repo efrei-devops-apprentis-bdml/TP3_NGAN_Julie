@@ -17,28 +17,24 @@ Utilisation de Alpine
 
 docker login –u username # login
 
-### Build image in docker hub
-#### Retrieve docker image
-https://hub.docker.com/repository/docker/juliengan/efrei-devops-tp3
+### Build image in docker hub using python 
+We pull the image of python version of alpine : python:3.11.0a7-alpine3.15
+We create a Dockerfile importing python with Alpine
 
-
+We build the docker image with the Dockerfile:
 docker build . -t efrei-devops-tp3:0.0.1
 
 docker tag efrei-devops-tp3:0.0.1 juliengan/efrei-devops-tp3:0.0.1 # I tag it
 
 docker push juliengan/efrei-devops-tp3:0.0.1 # I publish my image to dockerhub
 
-### Push on dockerhub
+### Push on dockerhub automatically using GitHub Actions
+Create a new workflow docker-push.yml
+with the actions : checkout, login and build-push-action
 
-
-### Run the code
-#### For the API
-
-docker run -it efrei-devops-tp3:0.0.1 python main.py 
+### Run the the API and Retrieve information in console
 
 docker run --network host --env API_KEY="62bd02468799bb9568074245d9b8631e" efrei-devops-tp3:0.0.1 python main.py
-
-#### Retrieve information in console
 curl "http://localhost:8081/?lat=5.902785&lon=102.754175"
 
 ## Build and deploy the docker image on Azure Container Instance and Registry
