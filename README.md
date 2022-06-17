@@ -41,3 +41,7 @@ curl "http://localhost:8081/?lat=5.902785&lon=102.754175"
 ## Build and deploy the docker image on Azure Container Instance and Registry
 
 Create a main.yml in France central location and name the container instance deployed with student id. By pushing the repository, the GitBut Action will be triggered and the container instance created on Azure.
+
+
+#### Retrieve information  in console from Azure Container Registry
+curl "http://devops-20180476.francecentral.azurecontainer.io/?lat=5.902785&lon=102.754175"
