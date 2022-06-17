@@ -28,6 +28,9 @@ docker tag efrei-devops-tp3:0.0.1 juliengan/efrei-devops-tp3:0.0.1 # I tag it
 
 docker push juliengan/efrei-devops-tp3:0.0.1 # I publish my image to dockerhub
 
+### Push on dockerhub
+
+
 ### Run the code
 #### For the API
 
