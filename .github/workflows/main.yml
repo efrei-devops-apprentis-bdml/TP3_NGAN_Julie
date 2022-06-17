@@ -36,3 +36,4 @@ jobs:
             name:  "20180476"
             ports: 80
             location: 'france central'
+
