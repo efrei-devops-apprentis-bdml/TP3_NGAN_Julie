@@ -37,3 +37,7 @@ docker run --network host --env API_KEY="62bd02468799bb9568074245d9b8631e" efrei
 
 #### Retrieve information in console
 curl "http://localhost:8081/?lat=5.902785&lon=102.754175"
+
+## Build and deploy the docker image on Azure Container Instance and Registry
+
+Create a main.yml in France central location and name the container instance deployed with student id. By pushing the repository, the GitBut Action will be triggered and the container instance created on Azure.
