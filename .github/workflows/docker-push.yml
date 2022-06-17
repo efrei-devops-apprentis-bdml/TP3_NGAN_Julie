@@ -11,7 +11,7 @@ jobs:
       id: meta
       uses: crazy-max/ghaction-docker-meta@v2
       with:
-        images: juliengan//efrei-devops-tp3:0.0.1
+        images: juliengan/efrei-devops-tp3
         tags: |
           type=raw,value=latest,enable=${{ endsWith(GitHub.ref, 'master') }}
           type=ref,event=tag
